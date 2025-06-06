@@ -6,6 +6,8 @@ public class BirdScript : MonoBehaviour
     // Diðer component'larla iletiþim kurabilmek için onlarý reference etmemiz lazým!
     public Rigidbody2D myRigidBody;
 
+    public float flapStrength; // Unity'de böyle bir field create'lemiþ olduk!
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     // Codes in Start will run as soon as the script is enabled!
     // Runs only once
@@ -22,7 +24,7 @@ public class BirdScript : MonoBehaviour
         // Check whether the Space is pressed
         if (Input.GetKeyDown(KeyCode.Space) == true)
         {
-            myRigidBody.linearVelocity = Vector2.up * 10;
+            myRigidBody.linearVelocity = Vector2.up * flapStrength;
         }
     }
 }
